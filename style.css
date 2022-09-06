@@ -2,9 +2,40 @@ body{
     margin: 0;
     background: darkgray;
     overflow: hidden;
+}
+
+h1{
     text-align: center;
+}
+
+#verticalButtons{
+    display: flex;
+    flex-direction: column;
+}
+
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+button{
+    border: none;
+    border-radius: 5px;
+    padding: 0.25rem;
+    margin: 1rem;
+    cursor: pointer;
+}
+
+button:hover{
+    filter: brightness(80%);
+    box-shadow: 0px 0px 2px 1px #3cfa16be;
 }
 
 #myCanvas{
     background: rgba(121, 119, 119, 0.452);
+}
+
+#networkCanvas{
+    background: #000;
 }

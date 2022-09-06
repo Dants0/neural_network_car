@@ -8,8 +8,21 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1>FreeCodeCamp AI </h1>
-    <canvas id="myCanvas"></canvas>
+    <h1>Cars in a Highway AI</h1>
+    <div class="container">
+        <canvas id="myCanvas"></canvas>
+        <div id="verticalButtons">
+            <button onclick="save()" >Save</button>
+            <button onclick="discard()">Discard</button>
+            <button onclick="reinitialize()" >Reinitialize</button>
+            <button onclick="changeAccelerationCars()" >Aceleration</button>
+        </div>
+        <canvas id="networkCanvas"></canvas>
+
+    </div>
+
+    <script src="visualizer.js"></script>
+    <script src="neuralnetwork.js"></script>
     <script src="controls.js"></script>
     <script src="sensor.js"></script>
     <script src="road.js"></script>

@@ -14,12 +14,12 @@ class Sensor{
         this.readings=[];
         for(let i=0;i<this.rays.length;i++){
             this.readings.push(
-                this.#getReading(this.rays[i],roadBorders)
+                this.#getReading(this.rays[i],roadBorders, traffic)
             );
         }
     }
 
-    #getReading(ray,roadBorders){
+    #getReading(ray,roadBorders, traffic){
         let touches=[];
 
         for(let i=0;i<roadBorders.length;i++){

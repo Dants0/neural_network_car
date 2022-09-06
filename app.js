@@ -9,7 +9,7 @@ const road = new Road(canvas.width/2, canvas.width*0.9);
 // const car = new Car(road.getLaneCenter(2),200,30,50,"AI"); //car in the middle line on highway
 
 let pause = false;
-const N = 1 //numbers to generated
+const N = 10 //numbers to generated
 const cars = generateCars(N) 
 let bestCar = cars[0];//best car in gen
 
@@ -22,7 +22,9 @@ if(localStorage.getItem("bestBrain")){
         }
     }
 }
-const traffic =[
+
+
+const traffic =[    
     new Car(road.getLaneCenter(2),-200, 30, 50,"DUMMY", 2),
     new Car(road.getLaneCenter(1),-100,30,50,"DUMMY",2),
     new Car(road.getLaneCenter(0),-300,30,50,"DUMMY",2),
@@ -31,6 +33,11 @@ const traffic =[
     new Car(road.getLaneCenter(1),-500,30,50,"DUMMY",2),
     new Car(road.getLaneCenter(1),-700,30,50,"DUMMY",2),
     new Car(road.getLaneCenter(3),-700,30,50,"DUMMY",2),
+    new Car(road.getLaneCenter(2),-750, 30, 50,"DUMMY", 2),
+    new Car(road.getLaneCenter(1),-800,30,50,"DUMMY",2),
+    new Car(road.getLaneCenter(0),-835,30,50,"DUMMY",2),
+    new Car(road.getLaneCenter(2),-845,30,50,"DUMMY",2),
+    new Car(road.getLaneCenter(4),-950,30,50,"DUMMY",2),
 ];
 
 

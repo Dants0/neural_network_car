@@ -46,6 +46,7 @@ class Car {
         }
         if (this.sensor) {
             this.sensor.update(roadBorders, traffic);
+            
             const offsets = this.sensor.readings.map(
                 s => s == null ? 0 : 1 - s.offset
             );
@@ -67,12 +68,14 @@ class Car {
     #assessDamage(roadBorders, traffic) {
         for (let i = 0; i < roadBorders.length; i++) {
             if (polysIntersect(this.polygon, roadBorders[i])) {
+                messageCollision.innerHTML="An entity of yours had a collision with a wall"
                 return true;
             }
         }
 
         for (let i = 0; i < traffic.length; i++) {
             if (polysIntersect(this.polygon, traffic[i].polygon)) {
+                messageCollision.innerHTML="An entity of yours had a collision with another car"
                 return true;
             }
         }

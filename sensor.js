@@ -1,3 +1,5 @@
+const messageCollision = document.getElementById('messageCollision')
+
 class Sensor {
     constructor(car) {
         this.car = car;
@@ -31,6 +33,7 @@ class Sensor {
             );
             if (touch) {
                 touches.push(touch);
+                
             }
         }
 
@@ -45,11 +48,14 @@ class Sensor {
                 )
                 if (value) {
                     touches.push(value)
+
+                    
                 }
             }
         }
 
         if (touches.length == 0) {
+            
             return null;
         } else {
             const offsets = touches.map(e => e.offset);
@@ -96,7 +102,7 @@ class Sensor {
                 end.x,
                 end.y
             );
-            // ctx.stroke();
+            ctx.stroke();
 
             ctx.beginPath();
             ctx.lineWidth = 2;
@@ -109,7 +115,7 @@ class Sensor {
                 end.x,
                 end.y
             );
-            // ctx.stroke();
+            ctx.stroke();
         }
     }
 }

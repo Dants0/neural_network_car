@@ -3,13 +3,14 @@ canvas.width = 300; //highway canvas width
 const networkCanvas = document.getElementById('networkCanvas')
 networkCanvas.width = 300; //highway canvas width
 
+const saveBestCar = document.getElementById('saveTheBestCar')
+
 const ctx = canvas.getContext("2d");
 const networkCtx = networkCanvas.getContext("2d");
 const road = new Road(canvas.width/2, canvas.width*0.9);
-// const car = new Car(road.getLaneCenter(2),200,30,50,"AI"); //car in the middle line on highway
 
 let pause = false;
-const N = 10 //numbers to generated
+const N = 2 //numbers to generated
 const cars = generateCars(N) 
 let bestCar = cars[0];//best car in gen
 
@@ -95,7 +96,8 @@ function generateCars(N){
 function save(){
     localStorage.setItem("bestBrain",
         JSON.stringify(bestCar.brain));
-        console.log('save')
+        saveBestCar.innerText="Check your console for see the best car brain in this generation"
+        console.log(bestCar.brain);
 }
 
 function discard(){
@@ -111,5 +113,5 @@ function changeAccelerationCars(){
     return animate()
 }
 
-// animate();
+animate();
 

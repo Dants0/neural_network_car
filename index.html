@@ -9,10 +9,20 @@
 </head>
 <body>
     <h1>Cars in a Highway AI</h1>
+    
     <div class="container">
+        <div class="boxContentLog">
+            <h5>LOG</h5>
+            <div class="contentMessageLog">
+                <p id="messageCollision"></p>
+            </div>
+            <div class="contentMessageLog">
+                <p id="saveTheBestCar"></p>
+            </div>
+        </div>
         <canvas id="myCanvas"></canvas>
         <div id="verticalButtons">
-            <button onclick="save()" >Save</button>
+            <button onclick="save()" download="SaveTheBestCarInputLog">Save</button>
             <button onclick="discard()">Discard</button>
             <button onclick="reinitialize()" >Reinitialize</button>
             <button onclick="changeAccelerationCars()" >Aceleration</button>

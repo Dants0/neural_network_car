@@ -27,7 +27,7 @@ class Car {
         this.mask.width=width;
         this.mask.height=height;
 
-        let color = "red"
+        let color = "red" //change color car
 
         const maskCtx=this.mask.getContext("2d");
         this.img.onload=()=>{

@@ -15,6 +15,7 @@ class NeuralNetwork{
                 outputs, network.levels[i]);
         }
 
+        // console.log(outputs);
         return outputs;
     }
 

@@ -10,10 +10,16 @@ const ctx = canvas.getContext("2d");
 const networkCtx = networkCanvas.getContext("2d");
 const road = new Road(canvas.width/2, canvas.width*0.9);
 
+const counterEntityNumber = document.querySelector('.entityCounter')
+const bestShow = document.querySelector('.bestCarShow')
+
 let pause = false;
-const N = 10 //numbers to generated
+const N = 0 //numbers to generated
 const cars = generateCars(N) 
 let bestCar = cars[0];//best car in gen
+
+counterEntityNumber.innerText = 'Quantidade de carros gerados: ' + N
+
 
 if(localStorage.getItem("bestBrain")){
     for(let i=0;i<cars.length;i++){
@@ -103,6 +109,7 @@ function save(){
         JSON.stringify(bestCar.brain));
         saveBestCar.innerText="Check your console for see the best car brain in this generation"
         console.log(bestCar.brain);
+        bestShow.innerText = 'Best Output: ' + bestCar.brain.levels[0].outputs
 }
 
 function discard(){

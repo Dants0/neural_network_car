@@ -102,7 +102,7 @@ class Sensor {
                 end.x,
                 end.y
             );
-            ctx.stroke();
+            // ctx.stroke();
 
             ctx.beginPath();
             ctx.lineWidth = 2;
@@ -115,7 +115,7 @@ class Sensor {
                 end.x,
                 end.y
             );
-            ctx.stroke();
+            // ctx.stroke();
         }
     }
 }

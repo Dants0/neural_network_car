@@ -14,11 +14,7 @@ const counterEntityNumber = document.querySelector('.entityCounter')
 const bestShow = document.querySelector('.bestCarShow')
 
 let pause = false;
-<<<<<<< HEAD
-const N = 45 //numbers to generated
-=======
 const N = 0 //numbers to generated
->>>>>>> 6d260a279a5f6f286563ea33efe1765200c1c41b
 const cars = generateCars(N) 
 let bestCar = cars[0];//best car in gen
 
